@@ -51,12 +51,18 @@ function addNum(e) {
     e.preventDefault();
     num += parseInt(input.value);
     display.innerText = num;
+    if (num >= 0) {
+        display.style.color = 'black';
+    }
 }
 
 function subtractNum(e) {
     e.preventDefault();
     num -= parseInt(input.value);
     display.innerText = num;
+    if (num < 0) {
+        display.style.color = 'red';
+    }
 }
 
 plus.addEventListener("click", (e)=> addNum(e))
